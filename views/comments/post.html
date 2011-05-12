@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+{{for comment in comments:}}
+<div class="comment">
+  on {{=comment.posted_on}} {{=comment.posted_by.first_name}}
+  says <span class="comment_body">{{=comment.body}}</span>
+</div>
+{{pass}}
+{{=form}}
